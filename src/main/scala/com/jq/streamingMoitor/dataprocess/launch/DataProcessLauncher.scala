@@ -42,15 +42,7 @@ object DataProcessLauncher {
       "auto.offset.reset" -> "earliest",
       "enable.auto.commit" -> (false: java.lang.Boolean)
     )
-//    val kafkaParams = Map[String, Object](
-//      //指定消费kafka的ip和端口
-//      "bootstrap.servers"-> kafkas,
-//      "group.id"->groupid,
-//      "key.deserializer"-> PropertiesUtil.getStringByKey("default.key_serializer_class_config", "kafkaConfig.properties"),
-//      "value.deserializer" -> PropertiesUtil.getStringByKey("default.value_serializer_class_config", "kafkaConfig.properties"),
-//      "auto.offset.reset" -> "earliest",
-//      "enable.auto.commit" -> (false: java.lang.Boolean)
-//    )
+
 
     val topic = PropertiesUtil.getStringByKey("source.nginx.topic", "kafkaConfig.properties")
 
