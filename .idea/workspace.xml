@@ -2,20 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30a0ce82-5da9-47e6-abe6-b92a4a3fbb96" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/jq/streamingMoitor/rulecompute/businessprocess/AnalyzeRuleDB.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/jq/streamingMoitor/rulecompute/businessprocess/BroadcastProcess.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/jq/streamingMoitor/rulecompute/businessprocess/CoreRule.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/jq/streamingMoitor/rulecompute/businessprocess/QueryDataPackage.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/jq/streamingMoitor/rulecompute/launch/QueryLauncher.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/core-site.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/hdfs-site.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/jq/streamingMoitor/rulecompute/businessprocess/RuleUtil.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/HDFSPathConfig.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/HDFSPathConfig.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/jq/streamingMoitor/common/bean/FlowCollocation.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/jq/streamingMoitor/common/bean/FlowCollocation.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/jq/streamingMoitor/common/util/hdfs/BlackListToHDFS.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/jq/streamingMoitor/common/util/hdfs/BlackListToHDFS.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/jq/streamingMoitor/common/util/hdfs/BlackListToRedis.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/jq/streamingMoitor/common/util/hdfs/BlackListToRedis.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/jq/streamingMoitor/common/util/hdfs/HdfsSaveUtil.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/jq/streamingMoitor/common/util/hdfs/HdfsSaveUtil.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/com/jq/streamingMoitor/dataprocess/launch/DataProcessLauncher.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/jq/streamingMoitor/dataprocess/launch/DataProcessLauncher.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/jq/streamingMoitor/dataprocess/launch/QueryLauncher.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/dataprocess/businessprocess/SparkStreamingMonitor$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/dataprocess/businessprocess/SparkStreamingMonitor$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/dataprocess/launch/DataProcessLauncher$$anonfun$setupScc$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/dataprocess/launch/DataProcessLauncher$$anonfun$setupScc$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/dataprocess/launch/DataProcessLauncher$$anonfun$setupScc$2$$anonfun$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/dataprocess/launch/DataProcessLauncher$$anonfun$setupScc$2$$anonfun$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/dataprocess/launch/DataProcessLauncher$$anonfun$setupScc$2$$anonfun$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/dataprocess/launch/DataProcessLauncher$$anonfun$setupScc$2$$anonfun$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/dataprocess/launch/DataProcessLauncher$$anonfun$setupScc$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/dataprocess/launch/DataProcessLauncher$$anonfun$setupScc$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/dataprocess/launch/DataProcessLauncher$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/dataprocess/launch/DataProcessLauncher$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/jq/streamingMoitor/rulecompute/businessprocess/CoreRule.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/jq/streamingMoitor/rulecompute/businessprocess/CoreRule.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/jq/streamingMoitor/rulecompute/launch/QueryLauncher.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/jq/streamingMoitor/rulecompute/launch/ComputeLauncher.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HDFSPathConfig.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/HDFSPathConfig.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/common/bean/FlowCollocation$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/common/bean/FlowCollocation$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/common/bean/FlowCollocation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/common/bean/FlowCollocation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/common/util/hdfs/BlackListToHDFS$$anonfun$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/common/util/hdfs/BlackListToHDFS$$anonfun$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/common/util/hdfs/BlackListToHDFS$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/common/util/hdfs/BlackListToHDFS$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/common/util/hdfs/BlackListToHDFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/common/util/hdfs/BlackListToHDFS.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/common/util/hdfs/BlackListToRedis$$anonfun$blackListDataToRedis$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/common/util/hdfs/BlackListToRedis$$anonfun$blackListDataToRedis$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/common/util/hdfs/BlackListToRedis$$anonfun$dataToRedis$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/common/util/hdfs/BlackListToRedis$$anonfun$dataToRedis$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/common/util/hdfs/BlackListToRedis$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/common/util/hdfs/BlackListToRedis$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/common/util/hdfs/BlackListToRedis.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/common/util/hdfs/BlackListToRedis.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/common/util/hdfs/HdfsSaveUtil$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/common/util/hdfs/HdfsSaveUtil$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/rulecompute/businessprocess/CoreRule$$anonfun$ipAccessCounts$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/rulecompute/businessprocess/CoreRule$$anonfun$ipAccessCounts$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/rulecompute/businessprocess/CoreRule$$anonfun$ipAccessCounts$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/rulecompute/businessprocess/CoreRule$$anonfun$ipAccessCounts$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/rulecompute/businessprocess/CoreRule$$anonfun$ipBlackAccessCounts$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/rulecompute/businessprocess/CoreRule$$anonfun$ipBlackAccessCounts$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/rulecompute/businessprocess/CoreRule$$anonfun$ipBlackAccessCounts$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/rulecompute/businessprocess/CoreRule$$anonfun$ipBlackAccessCounts$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/rulecompute/businessprocess/CoreRule$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/rulecompute/businessprocess/CoreRule$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/rulecompute/businessprocess/CoreRule.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/rulecompute/businessprocess/CoreRule.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/rulecompute/launch/ComputeLauncher$$anonfun$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/rulecompute/launch/ComputeLauncher$$anonfun$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/rulecompute/launch/ComputeLauncher$$anonfun$setupSsc$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/rulecompute/launch/ComputeLauncher$$anonfun$setupSsc$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/rulecompute/launch/ComputeLauncher$$anonfun$setupSsc$2$$anonfun$apply$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/rulecompute/launch/ComputeLauncher$$anonfun$setupSsc$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/rulecompute/launch/ComputeLauncher$$anonfun$setupSsc$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/rulecompute/launch/ComputeLauncher$$anonfun$setupSsc$3$$anonfun$apply$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/rulecompute/launch/ComputeLauncher$$anonfun$setupSsc$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/rulecompute/launch/ComputeLauncher$$anonfun$setupSsc$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/rulecompute/launch/ComputeLauncher$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/rulecompute/launch/ComputeLauncher$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/rulecompute/launch/ComputeLauncher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jq/streamingMoitor/rulecompute/launch/ComputeLauncher.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +75,11 @@
     </option>
   </component>
   <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="E:/env/apache-maven-3.6.0" />
+      </MavenGeneralSettings>
+    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
@@ -76,7 +104,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/jike1714" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -86,12 +114,13 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Users\JQ\streamingMonitor1906\src\main\scala\com\jq\streamingMoitor" />
       <recent name="E:\Users\JQ\streamingMonitor1906\src\main\resources" />
+      <recent name="E:\Users\JQ\streamingMonitor1906\src\main\scala\com\jq\streamingMoitor\rulecompute\businessprocess" />
+      <recent name="E:\Users\JQ\streamingMonitor1906\src\main\scala\com\jq\streamingMoitor" />
     </key>
   </component>
   <component name="RunManager" selected="Application.ComputeLauncher">
@@ -164,7 +193,16 @@
       <workItem from="1583329627079" duration="79000" />
       <workItem from="1583329784205" duration="757000" />
       <workItem from="1583371426915" duration="22176000" />
-      <workItem from="1583456059577" duration="741000" />
+      <workItem from="1583456059577" duration="15172000" />
+      <workItem from="1583715186817" duration="22926000" />
+      <workItem from="1583800844926" duration="10349000" />
+      <workItem from="1583815939779" duration="5931000" />
+      <workItem from="1583847985092" duration="4041000" />
+      <workItem from="1583888115796" duration="2894000" />
+      <workItem from="1583895394375" duration="101000" />
+      <workItem from="1583896451877" duration="685000" />
+      <workItem from="1583931886534" duration="553000" />
+      <workItem from="1583934288655" duration="2842000" />
     </task>
     <task id="LOCAL-00001" summary="streamingMonitor first commit">
       <created>1583203463079</created>
@@ -208,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583371899481</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="实时监控">
+      <created>1583459305083</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1583459305083</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,7 +312,8 @@
     <MESSAGE value="streamingMonitor first commit" />
     <MESSAGE value="streamingMonitor second commit" />
     <MESSAGE value="streamingMonitor third commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="streamingMonitor third commit" />
+    <MESSAGE value="实时监控" />
+    <option name="LAST_COMMIT_MESSAGE" value="实时监控" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1104" y="209" key="#Auto_Import" timestamp="1583375150857">
@@ -278,10 +324,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="275" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583233804768" />
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1582805030936">
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1583758718955">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1582805030936" />
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1583758718955" />
     <state x="640" y="164" key="#com.intellij.unscramble.UnscrambleDialog" timestamp="1583243973149">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -290,10 +336,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="837" y="221" key="#xdebugger.evaluate/0.0.1920.1040@0.0.1920.1040" timestamp="1583238843531" />
-    <state x="423" y="132" key="CommitChangelistDialog2" timestamp="1583371898154">
+    <state x="423" y="132" key="CommitChangelistDialog2" timestamp="1583938665542">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="423" y="132" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1583371898154" />
+    <state x="423" y="132" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1583938665542" />
     <state x="1055" y="355" key="FileChooserDialogImpl" timestamp="1583394367116">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -302,46 +348,46 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="781" y="416" width="382" height="208" key="Github.CreateGistDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583200324316" />
-    <state width="1877" height="646" key="GridCell.Tab.0.bottom" timestamp="1583417347614">
+    <state width="1877" height="351" key="GridCell.Tab.0.bottom" timestamp="1583895374720">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="646" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583417347614" />
-    <state width="1877" height="646" key="GridCell.Tab.0.center" timestamp="1583417347614">
+    <state width="1877" height="351" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583895374720" />
+    <state width="1877" height="351" key="GridCell.Tab.0.center" timestamp="1583895374720">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="646" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583417347614" />
-    <state width="1877" height="646" key="GridCell.Tab.0.left" timestamp="1583417347612">
+    <state width="1877" height="351" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583895374720" />
+    <state width="1877" height="351" key="GridCell.Tab.0.left" timestamp="1583895374720">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="646" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583417347612" />
-    <state width="1877" height="646" key="GridCell.Tab.0.right" timestamp="1583417347614">
+    <state width="1877" height="351" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583895374720" />
+    <state width="1877" height="351" key="GridCell.Tab.0.right" timestamp="1583895374720">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="646" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583417347614" />
-    <state width="1495" height="750" key="GridCell.Tab.1.bottom" timestamp="1583329618077">
+    <state width="1877" height="351" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583895374720" />
+    <state width="1877" height="331" key="GridCell.Tab.1.bottom" timestamp="1583847264032">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1495" height="750" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583329618077" />
-    <state width="1495" height="750" key="GridCell.Tab.1.center" timestamp="1583329618077">
+    <state width="1877" height="331" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583847264032" />
+    <state width="1877" height="331" key="GridCell.Tab.1.center" timestamp="1583847264032">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1495" height="750" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583329618077" />
-    <state width="1495" height="750" key="GridCell.Tab.1.left" timestamp="1583329618077">
+    <state width="1877" height="331" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583847264032" />
+    <state width="1877" height="331" key="GridCell.Tab.1.left" timestamp="1583847264032">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1495" height="750" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583329618077" />
-    <state width="1495" height="750" key="GridCell.Tab.1.right" timestamp="1583329618077">
+    <state width="1877" height="331" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583847264032" />
+    <state width="1877" height="331" key="GridCell.Tab.1.right" timestamp="1583847264032">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1495" height="750" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583329618077" />
-    <state x="645" y="199" width="998" height="711" key="SettingsEditor" timestamp="1583394558359">
+    <state width="1877" height="331" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583847264032" />
+    <state x="645" y="199" width="998" height="711" key="SettingsEditor" timestamp="1583896498524">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="645" y="199" width="998" height="711" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583394558359" />
-    <state x="644" y="244" key="Vcs.Push.Dialog.v2" timestamp="1583371902740">
+    <state x="645" y="199" width="998" height="711" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583896498524" />
+    <state x="644" y="244" key="Vcs.Push.Dialog.v2" timestamp="1583459307498">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="644" y="244" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1583371902740" />
+    <state x="644" y="244" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1583459307498" />
     <state x="716" y="245" key="VcsDiffUtil.ChangesDialog" timestamp="1583203939359">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -358,18 +404,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="751" y="302" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583329637447" />
-    <state x="476" y="360" key="new project wizard" timestamp="1583394420985">
+    <state x="476" y="360" key="new project wizard" timestamp="1583895492518">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="476" y="360" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1583394420985" />
+    <state x="476" y="360" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1583895492518" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1583237784303">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1583237784303" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1583237781361">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1583720243773">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1583237781361" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1583720243773" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -379,7 +425,23 @@
           <line>62</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/src/main/scala/com/jq/streamingMoitor/rulecompute/businessprocess/QueryDataPackage.scala</url>
+          <line>17</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/src/main/scala/com/jq/streamingMoitor/common/util/hdfs/BlackListToRedis.scala</url>
+          <line>42</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="((CallSite)((ShuffledDStream)ipSectionCounts).creationSite).shortForm" language="Scala" custom="org.apache.spark.streaming.dstream.ShuffledDStream,org.apache.spark.util.CallSite" />
+        <watch expression="antiCalculateResult" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

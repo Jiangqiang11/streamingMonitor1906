@@ -2,7 +2,6 @@ package com.jq.streamingMoitor.common.util.hdfs
 
 import java.text.SimpleDateFormat
 import java.util.Date
-
 import org.apache.spark.sql.{DataFrame, SaveMode}
 import org.apache.spark.streaming.Time
 

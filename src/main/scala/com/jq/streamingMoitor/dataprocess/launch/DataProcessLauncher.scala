@@ -32,7 +32,6 @@ object DataProcessLauncher {
     //kafka params
     val kafkas = PropertiesUtil.getStringByKey("default.brokers", "kafkaConfig.properties")
 
-
     val kafkaParams = Map[String, Object](
       //指定消费kafka的ip和端口
       "bootstrap.servers"-> kafkas,
@@ -43,13 +42,11 @@ object DataProcessLauncher {
       "enable.auto.commit" -> (false: java.lang.Boolean)
     )
 
-
     val topic = PropertiesUtil.getStringByKey("source.nginx.topic", "kafkaConfig.properties")
 
     val topics = Set(topic)
 
     val scc = setupScc(sc, kafkaParams, topics)
-
 
     scc.start()
     scc.awaitTermination()
@@ -104,8 +101,8 @@ object DataProcessLauncher {
       queryBooksBroadcast = BroadCastProcess.queryBooksRule(sc, queryBooksBroadcast, jedis)
       //监控高频ip列表
       ipBlackListRef = BroadCastProcess.ipBlackListRule(sc, ipBlackListRef, jedis)
-      //对数据进行切分处理
 
+      //对数据进行切分处理
       val value: RDD[AccessLog] = DataSplit.parseAccessLog(rdd)
       //链路统计
       val serverCount: RDD[(String, Int)] = BusinessProcess.linkCont(value, jedis)

@@ -6,7 +6,7 @@ import com.jq.streamingMoitor.common.util.jedis.PropertiesUtil
 import org.apache.hadoop.conf.Configuration
 import org.apache.hadoop.fs.{FileSystem, Path}
 import org.apache.spark.SparkContext
-import org.apache.spark.sql.{DataFrame, SQLContext}
+import org.apache.spark.sql.{DataFrame, SQLContext, SparkSession}
 import redis.clients.jedis.JedisCluster
 
 import scala.collection.mutable.ArrayBuffer
@@ -16,22 +16,22 @@ import scala.collection.mutable.ArrayBuffer
   */
 object BlackListToRedis {
   /**
-    *判断指定redis库中的表是否为空，为空则进行设置HDFS中目录的标识
+    * 判断指定redis库中的表是否为空，为空则进行设置HDFS中目录的标识
     *
     * @param jedis：通过jedis对redis进行操作
     * @param sc：传入的sparkContext
-    * @param sqlContext ：传入的SQLContext
+    * @param spark ：传入的SparkSession
     */
-  def blackListDataToRedis(jedis: JedisCluster,sc: SparkContext,sqlContext: SQLContext): Unit = {
+  def blackListDataToRedis(jedis: JedisCluster,sc: SparkContext,spark: SparkSession): Unit = {
     val dangKey = jedis.get("dang")
     if(dangKey == "no"){
-      jedis.set("dang","no")
+//      jedis.set("dang","no")
     }else {
       val arrayBuffer: ArrayBuffer[String] = ArrayBuffer()
       //获取hdfs的FileSystem
       val conf = new Configuration()
       //配置hdfs的路径
-      conf.set("fs.defaultFS", "hdfs://192.168.56.111:8020");
+      conf.set("fs.defaultFS", "hdfs://supercluster");
       val fs = FileSystem.get(conf)
       //时间格式化类，用于按时间存储
       val sdf = new SimpleDateFormat("yyyy/MM/dd/HH")
@@ -47,25 +47,25 @@ object BlackListToRedis {
         }
       }
       //将黑名单数据向Redis中进行插入
-      dataToRedis(sqlContext, arrayBuffer.toArray, jedis)
+      dataToRedis(spark, arrayBuffer.toArray, jedis)
     }
   }
 
   /**
     * 创建DataFrame
     *
-    * @param sqlContext
+    * @param spark
     * @param paths：HDFS路径
     * @param jedis
     */
-  def dataToRedis(sqlContext:SQLContext,paths:Array[String],jedis: JedisCluster): Unit ={
-      val parquet1: DataFrame = sqlContext.read.parquet(paths:_*)
-      //对parquet1按key去重，取最大的keyExpTime对应的记录，这里使用表join进行去重
-      parquet1.registerTempTable("blacklist")
-      val grouped = sqlContext.sql("select max(keyExpTime) keyExpTime, key from blacklist group by key")
+  def dataToRedis(spark:SparkSession,paths:Array[String],jedis: JedisCluster): Unit ={
+    val parquet1: DataFrame = spark.read.parquet(paths:_*)
+    //对parquet1按key去重，取最大的keyExpTime对应的记录，这里使用表join进行去重
+    parquet1.createOrReplaceTempView("blacklist")
+    val grouped = spark.sql("select max(keyExpTime) keyExpTime, key from blacklist group by key")
     grouped.show()
-      grouped.registerTempTable("groupedlist")
-      val distincted = sqlContext.sql("select a.keyExpTime, a.key, a.value from blacklist a join groupedlist b on a.keyExpTime=b.keyExpTime and a.key=b.key")
+    grouped.createOrReplaceTempView("groupedlist")
+    val distincted: DataFrame = spark.sql("select a.keyExpTime, a.key, a.value from blacklist a join groupedlist b on a.keyExpTime=b.keyExpTime and a.key=b.key")
     distincted.show()
     distincted.collect().foreach( s => toRedis(jedis,s.get(1).toString,s.get(2).toString,s.get(0).toString.toLong))
   }
